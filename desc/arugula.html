@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-Commerce Website/Homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="homepage.css">
+<link rel="stylesheet" type="text/css" href="responsize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="v.css">
+<style>
+*{
+box-sizing:border-box;}
+.insidecard{
+border:3px solid black;
+margin:auto;
+width:60%;
+padding:10px;
+
+}
+.insidecard::after{
+content:"";
+display:table;
+clear:both;}
+.desc{
+padding:10px;
+text-align:center;
+}
+
+
+.cardimage{
+float:left;
+width: 50%;
+height:auto;
+}
+
+
+.button{
+  display: inline-block;
+  padding: 15px 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #fc3838;
+  border: none;
+  border-radius: 15px;
+
+  
+}
+
+
+
+.button:hover {background-color: #fc3850}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}
+.button2{
+  display: inline-block;
+  padding: 15px 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #fc3838;
+  border: none;
+  border-radius: 15px;
+  
+}
+
+
+
+.button2:hover {background-color: #fc3850}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="img/logo.jpg" style="float:left;width:42px;height:42px;">
+  <a href="#" class="logo">VEGGIES!</a>
+
+</div>
+
+<ul class="topnav">
+   <li><a class="active" href="../Homepagelogout.php">Home</a></li>
+   <div class="dropdown">
+   <div class="dropdown">
+    <button class="dropbtn">Catogeries 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+       <a href="../leafy.php">GreenLeafy</a> 
+       <a href="../rootveg.php" >Root</a> 
+    <a href="../fruitveg.php">FruitVeggies</a>
+    </div>
+  </div> 
+</ul>
+
+<br>
+<form action="../insertcart.php" method="POST">
+  <div class="insidecard">
+<img class="cardimage" src="img\arugula.jpg">
+<h2 style="text-align:center;">Arugula</h2>
+
+
+
+<div class="desc">
+<p>Price : Rs 10 </p>
+<p>Arugula (American English) /əˈruːɡulə/ or rocket (British English) (Eruca sativa; syns. E. vesicaria subsp. sativa (Miller) Thell., Brassica eruca L.) is an edible annual plant in the family Brassicaceae used as a leaf vegetable for its fresh, tart, bitter, and peppery flavor. Other common names include garden rocket,[1] (British, Australian, South African, Irish and New Zealand English),[2] and eruca.[2] Some additional names are "rocket salad",[3] "rucola", "rucoli", "rugula", "colewort", and "roquette". Eruca sativa, which is widely popular as a salad vegetable, is a species of Eruca native to the Mediterranean region, from Morocco and Portugal in the west to Syria, Lebanon, and Turkey in the east.</p>
+
+<p>Expected to deliver in 1 or 2 days.</p>
+<p>Apply coupon code to avail new offers.</p> <br>
+
+ <input type="text" name="quantity" placeholder="In KG only" required>
+  <input type="hidden" name="name" value="Arugula">
+  <input type="hidden" name="price" value="10"><br><br>
+  <p> <button class="button ">Add to Cart</button></p>
+
+
+ 
+
+</form>
+
+
+</div>
+
+
+
+</div>
+<br>
+
+<footer>
+  <div class="footer1">
+  <h2>About us </h2>
+  <p>Our Story</p>
+  <p>Terms and Policies</p>
+  <p>Privacy Policy</p>
+  </div>
+    <div class="footer2">
+	<h2>Contact</h2>
+	  <p>Contact Us	</p>
+  <p>Report Us</p>
+  <p>Advertise</p>
+  </div>
+    <div class="footer3">
+	<h2>Categories</h2>
+	  <p>Root</p>
+  <p>FruitVeggies</p>
+  <p>GreenLeavfy</p>
+  </div>
+    <div class="footer4">
+	
+	<h1><img src="img/logo.jpg" style="width:42px;height:42px;">VEGGIES</h1>
+  </div>
+  
+</footer>
+<footer>
+  <div class="footer5"><p style="font-size:0.75em;">Copyright © 2019 VEGGIEMART. All Rights Reserved.</p></div>
+</footer>
+
+ 
+
+
+
+
+</body>
+</html>

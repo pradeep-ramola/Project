@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-Commerce Website/Homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="homepage.css">
+<link rel="stylesheet" type="text/css" href="responsize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+*{
+box-sizing:border-box;}
+.insidecard{
+border:3px solid black;
+margin:auto;
+width:60%;
+padding:10px;
+
+}
+.insidecard::after{
+content:"";
+display:table;
+clear:both;}
+.desc{
+padding:10px;
+text-align:center;
+}
+
+.cardimage{
+float:left;
+width: 50%;
+height:auto;
+}
+
+
+.button{
+  display: inline-block;
+  padding: 15px 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #fc3838;
+  border: none;
+  border-radius: 15px;
+  
+}
+
+
+
+.button:hover {background-color: #fc3850}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button2{
+  display: inline-block;
+  padding: 15px 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #fc3838;
+  border: none;
+  border-radius: 15px;
+  
+}
+
+
+
+.button2:hover {background-color: #fc3850}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="img/logo.jpg" style="float:left;width:42px;height:42px;">
+  <a href="#" class="logo">VEGGIES!</a>
+
+</div>
+<ul class="topnav">
+   <li><a class="active" href="../Homepagelogout.php">Home</a></li>
+   <div class="dropdown">
+   <div class="dropdown">
+    <button class="dropbtn">Catogeries 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+       <a href="../leafy.php">GreenLeafy</a> 
+       <a href="../rootveg.php" >Root</a> 
+    <a href="../fruitveg.php">FruitVeggies</a>
+    </div>
+  </div> 
+</ul>
+
+
+<br>
+<form action="../insertcart.php" method="POST">
+<div class="insidecard">
+<img class="cardimage" src="img\cucumber.jpg">
+<h2 style="text-align:center;">Cucumber</h2>
+
+
+
+<div class="desc">
+<p> Price: Rs 10 </p>
+<p>The bell pepper (also known as sweet pepper, pepper or capsicum /ˈkæpsɪkəm/)[1] is a cultivar group of the species Capsicum annuum.[2] Cultivars of the plant produce fruits in different colours, including red, yellow, orange, green, white, and purple. Bell peppers are sometimes grouped with less pungent pepper varieties as "sweet peppers".
+
+Peppers are native to Mexico, Central America, and northern South America. Pepper seeds were imported to Spain in 1493 and then spread through Europe and Asia. The mild bell pepper cultivar was developed in the 1920s, in Szeged, Hungary</p>
+
+
+<p>Expected to deliver in 1 or 2 days</p>
+<p>Apply coupon code to avail new offers</p> 
+
+  
+<input type="text" name="quantity" placeholder="In KG only" required>
+  <input type="hidden" name="name" value="cucumber">
+  <input type="hidden" name="price" value="10"><br><br>
+  <p> <button class="button ">Add to Cart</button></p>
+</form>
+
+
+</div>
+
+
+
+</div>
+<br>
+
+<footer>
+  <div class="footer1">
+  <h2>About us </h2>
+  <p>Our Story</p>
+  <p>Terms and Policies</p>
+  <p>Privacy Policy</p>
+  </div>
+    <div class="footer2">
+	<h2>Contact</h2>
+	  <p>Contact Us	</p>
+  <p>Report Us</p>
+  <p>Advertise</p>
+  </div>
+    <div class="footer3">
+	<h2>Categories</h2>
+	  <p>Root</p>
+  <p>FruitVeggies</p>
+  <p>GreenLeavfy</p>
+  </div>
+    <div class="footer4">
+	
+	<h1><img src="img/logo.jpg" style="width:42px;height:42px;">VEGGIES</h1>
+  </div>
+  
+</footer>
+<footer>
+  <div class="footer5"><p style="font-size:0.75em;">Copyright © 2019 VEGGIEMART. All Rights Reserved.</p></div>
+</footer>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+
+
+</body>
+</html>
